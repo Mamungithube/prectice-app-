@@ -1,7 +1,7 @@
 import { useLocalSearchParams, Stack } from 'expo-router';
 import { View, Text, Image, StyleSheet, ScrollView, SafeAreaView, ActivityIndicator, TouchableOpacity } from 'react-native';
 import { useEffect, useState } from 'react';
-import { useCart } from '../context/card_content'; // পাথ ঠিক করা হয়েছে
+import { useCart } from '../context/card_content'; 
 
 interface Product {
     id: number;
@@ -15,7 +15,7 @@ interface Product {
 
 export default function ProductDetails() {
     const { id } = useLocalSearchParams();
-    const { addToCart } = useCart(); // এটি ফাংশনের ভেতরেই থাকবে
+    const { addToCart } = useCart();
 
     const [product, setProduct] = useState<Product | null>(null);
 
